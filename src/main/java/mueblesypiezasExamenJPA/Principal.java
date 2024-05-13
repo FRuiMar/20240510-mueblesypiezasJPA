@@ -1,19 +1,20 @@
 package mueblesypiezasExamenJPA;
 
 import java.awt.EventQueue;
-import java.util.List;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import mueblesypiezasExamenJPA.controladores.ControladorPieza;
-import mueblesypiezasExamenJPA.model.Pieza;
+
+import mueblesypiezasExamenJPA.view.PanelPieza;
 
 public class Principal extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	PanelPieza panelPieza;
 
 	/**
 	 * Launch the application.
@@ -30,22 +31,6 @@ public class Principal extends JFrame {
 			}
 		});
 		
-		
-		
-		
-		List<Pieza> lista = (List<Pieza>) ControladorPieza.getInstance().findAll();
-		
-//		for(int i = 0; i < lista.size(); i++) {
-//			System.out.println(lista.get(i).getNombre());
-//		}
-//		
-		
-		for (Pieza pieza : lista) {
-			System.out.println(pieza.getNombre());
-		}
-		
-		
-		
 	}
 
 	/**
@@ -53,11 +38,12 @@ public class Principal extends JFrame {
 	 */
 	public Principal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-		setContentPane(contentPane);
+		panelPieza = new PanelPieza();
+		setContentPane(panelPieza);
 	}
 
 }

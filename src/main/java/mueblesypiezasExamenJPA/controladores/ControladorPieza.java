@@ -4,8 +4,6 @@ import mueblesypiezasExamenJPA.model.Pieza;
 
 public class ControladorPieza extends Controlador {
 
-	
-
 	private static ControladorPieza instance = null;
 	
 	/**
@@ -25,8 +23,6 @@ public class ControladorPieza extends Controlador {
 		}
 		return instance;
 	}
-	
-	
 	
 	
 }

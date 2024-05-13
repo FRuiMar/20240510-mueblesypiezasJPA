@@ -126,4 +126,10 @@ public class Mueble extends Entidad implements Serializable {
 		return pieza;
 	}
 
+	@Override
+	public String toString() {
+		return nombre;
+	}
+
+	
 }
